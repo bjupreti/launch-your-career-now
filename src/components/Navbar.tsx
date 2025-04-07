@@ -16,8 +16,8 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/services" className="text-gray-700 hover:text-brand-teal transition-colors">
-            Services
+          <Link to="/testimonials" className="text-gray-700 hover:text-brand-teal transition-colors">
+            Testimonials
           </Link>
           <Link to="/pricing" className="text-gray-700 hover:text-brand-teal transition-colors">
             Pricing
@@ -53,11 +53,11 @@ const Navbar = () => {
         <div className="md:hidden px-2 pt-2 pb-4 bg-white">
           <div className="flex flex-col space-y-3">
             <Link
-              to="/services"
+              to="/testimonials"
               className="px-3 py-2 text-gray-700 hover:text-brand-teal transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              Testimonials
             </Link>
             <Link
               to="/pricing"
