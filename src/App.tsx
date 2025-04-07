@@ -12,6 +12,7 @@ import ResumeBuilder from "./pages/ResumeBuilder";
 import Interview from "./pages/Interview";
 import JobCampaign from "./pages/JobCampaign";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/interview" element={<Interview />} />
           <Route path="/campaign" element={<JobCampaign />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
