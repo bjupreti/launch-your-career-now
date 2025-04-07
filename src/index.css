@@ -78,10 +78,57 @@
   }
 }
 
+/* Modern utility classes */
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-md bg-white/80 border border-white/20 shadow-soft;
+  }
+  
+  .tech-card {
+    @apply rounded-lg bg-gradient-to-br from-white/5 to-white/10 border border-white/10 backdrop-blur-sm transition-all duration-300 hover:shadow-highlight;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-blue-dark to-brand-teal;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
 .hero-gradient {
   background: linear-gradient(135deg, #1a365d 0%, #2a4365 50%, #319795 100%);
 }
 
 .feature-gradient {
   background: linear-gradient(135deg, rgba(26, 54, 93, 0.05) 0%, rgba(49, 151, 149, 0.1) 100%);
+}
+
+.card-gradient {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mesh-bg {
+  background-image: radial-gradient(at 40% 20%, rgba(49, 151, 149, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 80% 0%, rgba(26, 54, 93, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 0% 50%, rgba(49, 151, 149, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 80% 50%, rgba(26, 54, 93, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 0% 100%, rgba(49, 151, 149, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 80% 100%, rgba(26, 54, 93, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 0% 0%, rgba(49, 151, 149, 0.1) 0px, transparent 50%);
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.input-focus-ring {
+  @apply transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring;
 }
